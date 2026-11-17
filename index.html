@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação: Mídias Digitais e AutorIA</title>
+<style>
+:root {
+--cor-fundo: #090D16;
+--cor-slide: #111827;
+--cor-borda: #1F2937;
+--cor-destaque: #8B5CF6;
+--cor-destaque-claro: #A78BFA;
+--cor-texto: #F9FAFB;
+--cor-subtexto: #9CA3AF;
+--cor-card: #1E293B;
+}
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--cor-fundo);
+color: var(--cor-texto);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.apresentacao-container {
+width: 100%;
+max-width: 850px;
+background-color: var(--cor-slide);
+border: 1px solid var(--cor-borda);
+border-radius: 16px;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.barra-superior {
+background-color: #0B1120;
+padding: 12px 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--cor-borda);
+font-size: 13px;
+color: var(--cor-subtexto);
+}
+
+.tag-tema {
+background-color: rgba(139, 92, 246, 0.15);
+color: var(--cor-destaque-claro);
+padding: 4px 10px;
+border-radius: 20px;
+font-weight: bold;
+}
+
+.area-slides {
+padding: 40px;
+min-height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.slide {
+display: none;
+animation: fadeIn 0.4s ease;
+}
+
+.slide.ativo {
+display: block;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(8px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+color: var(--cor-destaque-claro);
+font-size: 32px;
+margin-top: 0;
+margin-bottom: 16px;
+line-height: 1.2;
+}
+
+h2 {
+color: var(--cor-destaque-claro);
+font-size: 26px;
+margin-top: 0;
+margin-bottom: 20px;
+border-left: 4px solid var(--cor-destaque);
+padding-left: 14px;
+}
+
+p {
+font-size: 17px;
+line-height: 1.6;
+color: #E5E7EB;
+}
+
+.grid-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+
+.card {
+background-color: var(--cor-card);
+padding: 18px;
+border-radius: 12px;
+border: 1px solid #334155;
+}
+
+.card h3 {
+margin: 0 0 8px 0;
+color: var(--cor-destaque-claro);
+font-size: 17px;
+}
+
+.card p {
+margin: 0;
+font-size: 14px;
+color: var(--cor-subtexto);
+}
+
+.destaque-box {
+background-color: rgba(139, 92, 246, 0.1);
+border: 1px solid var(--cor-destaque);
+padding: 18px;
+border-radius: 12px;
+margin-top: 20px;
+}
+
+.barra-progresso-fundo {
+width: 100%;
+height: 4px;
+background-color: var(--cor-borda);
+}
+
+.barra-progresso {
+height: 100%;
+width: 16.6%;
+background-color: var(--cor-destaque);
+transition: width 0.3s ease;
+}
+
+.controles {
+background-color: #0B1120;
+padding: 16px 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-top: 1px solid var(--cor-borda);
+}
+
+button {
+background-color: var(--cor-destaque);
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 8px;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+background-color: #7C3AED;
+}
+
+button:disabled {
+background-color: #1F2937;
+color: #6B7280;
+cursor: not-allowed;
+}
+
+.indicador-slide {
+font-size: 14px;
+font-weight: bold;
+color: var(--cor-subtexto);
+}
+</style>
+</head>
+<body>
+
+<div class="apresentacao-container">
+<div class="barra-superior">
+<span class="tag-tema">Mídias Digitais &amp; AutorIA</span>
+<span>Use as setas do teclado ou os botões para navegar</span>
+</div>
+
+<div class="barra-progresso-fundo">
+<div class="barra-progresso" id="barraProgresso"></div>
+</div>
+
+<div class="area-slides">
+<!
+-SLIDE 1: CAPA -->
+<div class="slide ativo">
+<h1>Sua Apresentação com AutorIA</h1>
+<p>Como unir criatividade humana, narrativa estruturada e Inteligência Artificial generativa para criar apresentações multimodais de alto impacto.</p>
+<div class="destaque-box">
+<strong>Objetivo do Projeto:</strong> Explorar o processo colaborativo entre ser humano e máquina, mantendo o senso crítico, a autoria e a ética digital.
+</div>
+</div>
+<!
+-SLIDE 2: NARRATIVA E ROTEIRO -->
+<div class="slide">
+<h2>1. Estruturação da Narrativa</h2>
+<p>Uma boa apresentação começa antes do design. A Inteligência Artificial atua como parceira de brainstorming para organizar ideias em um roteiro lógico:</p>
+<div class="grid-cards">
+<div class="card">
+<h3>Introdução (Gancho)</h3>
+<p>Apresenta o problema ou pergunta central para despertar a curiosidade do público logo nos primeiros segundos.</p>
+</div>
+<div class="card">
+<h3>Desenvolvimento</h3>
+<p>Organiza argumentos, exemplos práticos e dados comprovados de forma clara e progressiva.</p>
+</div>
+<div class="card">
+<h3>Conclusão</h3>
+<p>Sintetiza a mensagem principal e convida o público à reflexão ou ação prática.</p>
+</div>
+</div>
+</div>
+<!
+-SLIDE 3: MULTIMODALIDADE -->
+<div class="slide">
+<h2>2. Recursos Multimodais com IA</h2>
+<p>Apresentações modernas combinam diferentes formatos de mídia para facilitar a compreensão e manter o engajamento:</p>
+<div class="grid-cards">
+<div class="card">
+<h3>Textos Sintéticos</h3>
+<p>Uso de prompts para transformar parágrafos longos em tópicos diretos e fáceis de ler nos slides.</p>
+</div>
+<div class="card">
+<h3>Elementos Visuais</h3>
+<p>Geração de ilustrações, ícones e layouts personalizados que reforçam o significado do texto.</p>
+</div>
+<div class="card">
+<h3>Áudio e Roteiro</h3>
+<p>Criação de notas do apresentador e narrações para tornar o conteúdo mais acessível.</p>
+</div>
+</div>
+</div>
+<!
+-SLIDE 4: ANÁLISE CRÍTICA -->
+<div class="slide">
+<h2>3. Análise Crítica de Dados e Fontes</h2>
+<p>A Inteligência Artificial generativa pode cometer erros ou gerar informações imprecisas ("alucinações"). Por isso, o papel do autor inclui:</p>
+<div class="destaque-box">
+<p style="margin: 0 0 10px 0;"><strong>• Verificação de Fatos:</strong> Conferir estatísticas, datas e citações em fontes confiáveis antes de incluir nos slides.</p>
+<p style="margin: 0;"><strong>• Curadoria de Conteúdo:</strong> Filtrar sugestões genéricas da IA e adaptar a linguagem ao público-alvo.</p>
+</div>
+</div>
+<!
+-SLIDE 5: AUTORIA E ÉTICA -->
+<div class="slide">
+<h2>4. Autoria, Ética e Limites da IA</h2>
+<p>Utilizar IA de forma responsável significa reconhecer o papel da ferramenta sem abrir mão da identidade criativa:</p>
+<div class="grid-cards">
+<div class="card">
+<h3>Coautoria Humana</h3>
+<p>A IA propõe caminhos e acelera tarefas, mas as decisões finais, o estilo e o olhar crítico pertencem ao autor.</p>
+</div>
+<div class="card">
+<h3>Transparência</h3>
+<p>Informar quando recursos generativos foram usados na criação de imagens ou análise de dados.</p>
+</div>
+</div>
+</div>
+<!
+-SLIDE 6: CONCLUSÃO -->
+<div class="slide">
+<h2>Conclusão</h2>
